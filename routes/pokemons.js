@@ -1,9 +1,15 @@
 const express = require("express");
-
 const router = express.Router();
+const pokemonsContoller = require('../controllers/pokemons')
 
-router.get("/:id/:info", (req, res) => res.send("ID INFO"));
-router.get("/:id", (req, res) => res.send(" ID route"));
-router.get("/", (req, res) => res.send("Hello from / pokemons"));
+router.get('/', (req, res) => {
+    console.log("redirecting")
+    res.redirect('/pokemons')
+});
+
+
+router.get("/pokemons/:id/:info", pokemonsContoller.getPokemonInfoByIdAndInfo);
+router.get("/pokemons/:id", pokemonsContoller.getPokemonById);
+router.get("/pokemons", pokemonsContoller.getAll);
 
 module.exports = router;
