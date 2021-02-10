@@ -13,6 +13,7 @@ const pokemonsContoller = {
         const pokemon = pokemons.find(poke => poke.id == id);
         res.json(pokemon[info])
     }
+    
 }
 
 module.exports = pokemonsContoller;
