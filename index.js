@@ -6,6 +6,6 @@ const pokemonRoutes = require("./routes/pokemons");
 
 app.use(cors())
 
-app.use("/", pokemonRoutes);
+app.use("/", pokemonRoutes); 
 
 app.listen(port, () => console.log(`Server listening to ${port}!`));
