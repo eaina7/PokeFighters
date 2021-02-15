@@ -7,9 +7,8 @@ router.get('/', (req, res) => {
     res.redirect('/pokemons')
 });
 
-
-router.get("/pokemons/:id/:info", pokemonsContoller.getPokemonInfoByIdAndInfo);
 router.get("/pokemons/:id", pokemonsContoller.getPokemonById);
 router.get("/pokemons", pokemonsContoller.getAll);
+
 
 module.exports = router;
