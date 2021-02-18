@@ -4,6 +4,7 @@ const cors = require('cors')
 const mongoose = require("mongoose");
 const port = process.env.PORT || 3000;
 const pokemonRoutes = require("./routes/pokemons");
+const resultsRoutes = require("./routes/results");
 
 app.use(cors())
 
@@ -14,6 +15,7 @@ const db = mongoose.connection;
 //Bind connection to error event (to get notification of connection errors)
 db.on("error", console.error.bind(console, "MongoDB connection error:"));
 
+app.use("/fight", resultsRoutes); 
 app.use("/", pokemonRoutes); 
 
 app.listen(port, () => console.log(`Server listening to ${port}!`));

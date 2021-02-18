@@ -5,10 +5,10 @@ const loadPokemons = (pokemons) => {
   pokemons.forEach(async (poke, index) => {
       try {
         await Pokemon.create({
-          id: poke.id,
-          name: poke.name,
-          type: poke.type,
-          base: JSON.stringify(poke.base)
+          "id": poke.id,
+          "name": poke.name,
+          "type": poke.type,
+          "base": poke.base
         })
         console.log(`Poke number ${index} is added`)
     } catch (e) {

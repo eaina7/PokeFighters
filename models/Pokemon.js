@@ -9,8 +9,12 @@ const pokemonSchema = new Schema({
     },
     "type": Array,
     "base": {
-      type: Map,
-      of: Number
+      hp: Number,
+      attack: Number,
+      defense: Number,
+      special_attack: Number,
+      special_defense: Number,
+      speed: Number,
     }
 });
 
