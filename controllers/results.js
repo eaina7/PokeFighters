@@ -13,10 +13,11 @@ const resultsController = {
     // const keys = Object.keys(pokeBase)
     // const values = Object.values(pokeBase)
 
-    // console.log("Data", )
-    Object.keys(pokeBase).forEach((key) => {
-      console.log(pokeBase[key])
-    })
+    console.log("Base", pokeBase)
+    console.log("Attack", pokeBase.Attack)
+    // Object.keys(pokeBase).forEach((key) => {
+    //   console.log(pokeBase[key])
+    // })
     res.send("yolo")
   //   Result.create({
   //   "winner id": firstPokeID,
