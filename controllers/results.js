@@ -10,8 +10,13 @@ const resultsController = {
     secondPokemonAttack = await Pokemon.find({id: secondPokeID});
     // secondPokemonDefence = await Pokemon.find({id: secondPokeID});
     const pokeBase = await firstPokemonAttack[0].base;
-    const {HP, Attack} = await pokeBase
-    console.log("Data", HP)
+    // const keys = Object.keys(pokeBase)
+    // const values = Object.values(pokeBase)
+
+    // console.log("Data", )
+    Object.keys(pokeBase).forEach((key) => {
+      console.log(pokeBase[key])
+    })
     res.send("yolo")
   //   Result.create({
   //   "winner id": firstPokeID,
