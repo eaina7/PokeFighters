@@ -4,12 +4,12 @@ const Schema = mongoose.Schema;
 const pokemonSchema = new Schema({
   "id": Number,
     "name": {
-      type: Map,
+      type: Object,
       of: String
     },
     "type": Array,
     "base": {
-      type: Map,
+      type: Object,
       of: Number
     }
 });
